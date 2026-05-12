@@ -1,0 +1,185 @@
+/* ================================
+   BLUE ANALYTICS THEME (GROUP SAFE)
+   ================================ */
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96,165,250,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(167,139,250,.14), transparent 60%),
+        linear-gradient(180deg, #0b1220, #0d1730);
+    margin: 0;
+    padding: 20px;
+    color: #eaf0ff;
+}
+
+/* Page Title */
+h1 {
+    color: #93c5fd; /* Soft Blue */
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* --- BACK BUTTON --- */
+.back-container {
+    position: absolute;
+    justify-items: right;
+    top: 20px;
+    left: 20px;
+}
+
+.btn-back {
+    text-decoration: none;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    color: #0b1220 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    display: inline-block;
+    border: none;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 20px rgba(96,165,250,.35);
+}
+
+.btn-back:hover {
+    transform: translateX(-3px);
+    box-shadow: 0 10px 30px rgba(167,139,250,.45);
+}
+
+/* --- FORM & SEARCH --- */
+form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(15,26,51,.7);
+    color: #eaf0ff;
+}
+
+input::placeholder {
+    color: rgba(234,240,255,.6);
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    color: #0b1220;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+/* --- EVENT LIST GRID --- */
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: rgba(15,26,51,.7);
+    padding: 20px;
+    border-radius: 18px;
+    border-top: 4px solid #60a5fa;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+/* --- REGISTRATION FORM CARD --- */
+.registration-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.registration-card {
+    background: rgba(15,26,51,.75);
+    padding: 30px;
+    border-radius: 20px;
+    border-top: 6px solid #60a5fa;
+    box-shadow: 0 15px 40px rgba(0,0,0,.45);
+    width: 100%;
+    max-width: 450px;
+}
+
+.registration-card h2 {
+    color: #93c5fd;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- FORM GROUPS --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: rgba(234,240,255,.75);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- BUTTONS --- */
+.btn, .btn-full, .btn-confirm {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 800;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Primary Button */
+.btn, .btn-confirm {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    color: #0b1220;
+    transition: .25s ease;
+}
+
+.btn:hover, .btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(96,165,250,.45);
+}
+
+/* Disabled / Full */
+.btn-full {
+    background: rgba(255,255,255,.2);
+    color: rgba(234,240,255,.6);
+    cursor: not-allowed;
+}
+.btn-full:hover {
+    transform: none;
+    box-shadow: none;
+}
