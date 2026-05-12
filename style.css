@@ -1,0 +1,256 @@
+:root {
+    /* --- THEME PALETTE --- */
+    --color-header: rgb(11, 19, 33);
+    --color-sidebar: rgb(18, 30, 55);
+    --color-content: rgb(42, 44, 76);    /* Surface color for cards/tables */
+    --color-background: rgb(11, 20, 38); /* Main Page Background */
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    
+    /* Accents */
+    --accent-color: #38bdf8; /* Light Blue for links/active states */
+    --accent-hover: #0ea5e9;
+    --btn-text: #ffffff;
+    
+    /* Borders */
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* --- LAYOUTS --- */
+
+/* 1. FLEX DASHBOARD (For Users.php, Profile, etc.) */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-background);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: var(--color-sidebar);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: all 0.2s;
+}
+
+.sidebar nav a:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--text-primary);
+    padding-left: 25px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Top Header Bar */
+.top-header {
+    height: 60px;
+    background-color: var(--color-header);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.top-header h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+/* Content Wrapper (Page Body) */
+.content-body {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* --- COMPONENTS --- */
+
+/* Cards / Content Surface */
+.card, .table-container {
+    background-color: var(--color-content);
+    /* padding: 25px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    /* margin-top: 10px; */
+    color: var(--text-secondary);
+}
+
+thead th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: rgb(11, 20, 38); /* Dark text on bright button for contrast */
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-manage {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 6px 12px;
+}
+
+.btn-manage:hover {
+    background-color: var(--accent-color);
+    color: var(--color-background);
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+
+
+/* Links Section */
+.links {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.help-link {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold; 
+}
+
+/* Error Alert Styling */
+.alert-error {
+    background-color: #e74c3c; /* Red color for errors */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Dialog */
